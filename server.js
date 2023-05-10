@@ -1,10 +1,11 @@
-const express=require("express");
-const bodyParser=require("body-parser");
-require('dotenv').config();
-const cors=require("cors");
-const helmet=require("helmet");
+import  express from "express";
+import  fetch from 'node-fetch';
+import  bodyParser from "body-parser";
+import dotenv from 'dotenv';
+dotenv.config();
+import cors from "cors";
+import helmet from "helmet";
 const app=express();
-
 app.use(helmet.crossOriginResourcePolicy({policy:"cross-origin"}));
 app.use(cors());
 app.use(bodyParser.json({limit:"30mb",extended:true}));
